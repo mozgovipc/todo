@@ -1,0 +1,3 @@
+<input type="checkbox" ng-model="$ctrl.done" ng-change="$ctrl.onDoneToggle({todo: $ctrl.todo, done: $ctrl.done})" />
+<magic-input text="$ctrl.todo.text" on-change="$ctrl.onTextChange({todo: $ctrl.todo, text})"></magic-input>
+<span>{{$ctrl.todo.text}} {{$ctrl.done}} {{$ctrl.todo.done}}</span>

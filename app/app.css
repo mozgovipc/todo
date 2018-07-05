@@ -1,1 +1,28 @@
 /* app css stylesheet */
+
+div.todo {
+  margin: 30px;
+}
+
+ul.todo-list {
+  margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+ul.todo-list todo-item input[type='text'] {
+  border: 1px solid transparent;
+  cursor: pointer;
+  background: #FFFFFF;
+  padding: 4px;
+}
+
+ul.todo-list todo-item input[type='text']:hover {
+  background: #E4E4E4;
+  border: 1px solid #8E8E8E;
+}
+
+ul.todo-list todo-item input[type='text']:focus {
+  background: #FFFFFF;
+  border: 1px solid #8E8E8E;
+}

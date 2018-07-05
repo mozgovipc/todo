@@ -7,5 +7,11 @@ angular
     controller: ['todoService',
       function(todoService) {
         this.todos = todoService.getTodos();
+        this.onDoneToggle = function(todo, done) {
+          todoService.setTodoDone(todo, done);
+        }
+        this.onTextChange = function(todo, text) {
+          todoService.setTodoText(todo, text);
+        }
       }],
   });

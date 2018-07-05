@@ -5,7 +5,7 @@ angular
   .factory('todoService', function(){
     var todos = [{
       text: 'TODO 1',
-      done: false,
+      done: true,
     }, {
       text: 'TODO 2',
       done: false,
@@ -23,10 +23,28 @@ angular
         });
       },
 
-      removeTodo: function(text) {
+      removeTodo: function(todo) {
         for (var i = 0; i < todos.length; i++) {
-          if (todos[i].text == text) {
+          if (todos[i] == todo) {
             todos.splice(i, 1);
+            return;
+          }
+        }
+      },
+
+      setTodoDone: function(todo, done) {
+        for (var i = 0; i < todos.length; i++) {
+          if (todos[i] == todo) {
+            todos[i].done = done;
+            return;
+          }
+        }
+      },
+
+      setTodoText: function(todo, text) {
+        for (var i = 0; i < todos.length; i++) {
+          if (todos[i] == todo) {
+            todos[i].text = text;
             return;
           }
         }

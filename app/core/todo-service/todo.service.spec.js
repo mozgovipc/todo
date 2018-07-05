@@ -26,7 +26,7 @@ describe('TodoApp todos service', function() {
   it('should remove todos', function() {
     var todos = todoService.getTodos();
 
-    todoService.removeTodo('TODO 1');
+    todoService.removeTodo(todos[1]);
     
     expect(todos.length).toBe(1);
   });

@@ -1,1 +1,9 @@
-<p class="todo-count">TODO count: {{$ctrl.todos.length}}</p>
+<div class="todo">
+  <ul class="todo-list">
+    <li ng-repeat="todo in $ctrl.todos">
+      <todo-item todo="todo" on-done-toggle="$ctrl.onDoneToggle(todo, done)"  on-text-change="$ctrl.onTextChange(todo, text)"></todo-item>
+    </li>
+  </ul>
+  
+  <p class="todo-count">TODO count: {{$ctrl.todos.length}}</p>
+</div>
