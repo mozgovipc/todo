@@ -1,6 +1,6 @@
 'use strict';
 
 angular
-  .module('TodoApp.view1', [
+  .module('TodoApp.todoList', [
     'TodoApp.core',
   ]);

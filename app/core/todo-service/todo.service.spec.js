@@ -3,7 +3,7 @@
 describe('TodoApp todos service', function() {
   var todoService;
   
-  beforeEach(module('TodoApp.view1'));
+  beforeEach(module('TodoApp.todoList'));
   beforeEach(inject(function(_todoService_) {
     todoService = _todoService_;
   }));
