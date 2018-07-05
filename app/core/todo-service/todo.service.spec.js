@@ -2,8 +2,30 @@
 
 describe('TodoApp todos service', function() {
   var todoService;
+
+  beforeEach(module('TodoApp.core'));
+
+  beforeEach(function() {
+    var windowMock = {
+      localStorage: {
+        setItem: function() {},
+        getItem: function() {
+          return JSON.stringify([{
+            text: 'TODO 1',
+            done: true,
+          }, {
+            text: 'TODO 2',
+            done: false,
+          }]);
+        },
+      },
+    };
   
-  beforeEach(module('TodoApp.todoList'));
+    module(function($provide) {
+      $provide.value('$window', windowMock);
+    });
+
+  });
   beforeEach(inject(function(_todoService_) {
     todoService = _todoService_;
   }));
