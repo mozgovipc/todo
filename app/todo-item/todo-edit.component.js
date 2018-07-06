@@ -1,8 +1,8 @@
 'user strict';
 
 angular
-  .module('TodoApp.core')
-  .component('magicInput', {
+  .module('TodoApp.todoItem')
+  .component('todoEdit', {
     bindings: {
       text: '<',
       onChange: '&',
@@ -19,7 +19,7 @@ angular
 
       ctrl.onBlur = function() {
         ctrl.editMode = false;
-        if (ctrl.textCopy != ctrl.text) {
+        if (ctrl.textCopy != ctrl.text && ctrl.textCopy.length > 0) {
           ctrl.onChange({text: ctrl.textCopy});
         }
       }
