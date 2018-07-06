@@ -8,21 +8,28 @@ angular
       function(todoService) {
         var ctrl = this;
 
+        ctrl.fitler = undefined;
+
         ctrl.todos = todoService.getTodos();
+
+        ctrl.setFilter = function($event, filter) {
+          $event.preventDefault();
+          ctrl.filter = filter;
+        }
         
-        this.onDoneToggle = function(todo, done) {
+        ctrl.onDoneToggle = function(todo, done) {
           todoService.setTodoDone(todo, done);
         }
         
-        this.onTextChange = function(todo, text) {
+        ctrl.onTextChange = function(todo, text) {
           todoService.setTodoText(todo, text);
         }
         
-        this.onAddTodo = function(text) {
+        ctrl.onAddTodo = function(text) {
           todoService.addTodo(text);
         }
 
-        this.onRemoveTodo = function($event, todo) {
+        ctrl.onRemoveTodo = function($event, todo) {
           $event.preventDefault();
           todoService.removeTodo(todo);
         }
