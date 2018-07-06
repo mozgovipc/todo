@@ -26,6 +26,7 @@ angular
         }
         
         ctrl.onAddTodo = function(text) {
+          ctrl.filter = undefined;
           todoService.addTodo(text);
         }
 
