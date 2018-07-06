@@ -3,6 +3,7 @@
   <ul class="todo-list">
     <li ng-repeat="todo in $ctrl.todos">
       <todo-item todo="todo" on-done-toggle="$ctrl.onDoneToggle(todo, done)"  on-text-change="$ctrl.onTextChange(todo, text)"></todo-item>
+      <a href="#" class="remove-todo" ng-click="$ctrl.onRemoveTodo($event, todo)">[x]</a>
     </li>
   </ul>
   

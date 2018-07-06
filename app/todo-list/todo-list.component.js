@@ -21,5 +21,10 @@ angular
         this.onAddTodo = function(text) {
           todoService.addTodo(text);
         }
+
+        this.onRemoveTodo = function($event, todo) {
+          $event.preventDefault();
+          todoService.removeTodo(todo);
+        }
       }],
   });
