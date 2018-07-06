@@ -1,4 +1,5 @@
 <div class="todo">
+  <todo-add on-add="$ctrl.onAddTodo(text)"></todo-add>
   <ul class="todo-list">
     <li ng-repeat="todo in $ctrl.todos">
       <todo-item todo="todo" on-done-toggle="$ctrl.onDoneToggle(todo, done)"  on-text-change="$ctrl.onTextChange(todo, text)"></todo-item>

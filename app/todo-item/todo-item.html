@@ -1,3 +1,2 @@
 <input type="checkbox" ng-model="$ctrl.done" ng-change="$ctrl.onDoneToggle({todo: $ctrl.todo, done: $ctrl.done})" />
 <todo-edit ng-class="{done: $ctrl.done}" text="$ctrl.todo.text" on-change="$ctrl.onTextChange({todo: $ctrl.todo, text})"></todo-edit>
-<span>{{$ctrl.todo.text}} {{$ctrl.done}} {{$ctrl.todo.done}}</span>
