@@ -8,7 +8,7 @@ angular
     var todos = [];
 
     var saveTodos = function() {
-      $window.localStorage.setItem(STORAGE_KEY, JSON.stringify(todos));
+      $window.localStorage.setItem(STORAGE_KEY, angular.toJson(todos));
     };
 
     var loadTodos = function() {
