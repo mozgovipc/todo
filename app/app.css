@@ -1,25 +1,36 @@
 /* app css stylesheet */
 
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+div.todo {
+  margin: 30px;
 }
 
-.menu:before {
-  content: "[";
+ul.todo-list {
+  margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
-.menu:after {
-  content: "]";
+ul.todo-list todo-item input[type='text'] {
+  border: 1px solid transparent;
+  cursor: pointer;
+  background: #FFFFFF;
+  padding: 4px;
 }
 
-.menu > li {
-  display: inline;
+ul.todo-list todo-item input[type='text']:hover {
+  background: #E4E4E4;
+  border: 1px solid #8E8E8E;
 }
 
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+ul.todo-list todo-item input[type='text']:focus {
+  background: #FFFFFF;
+  border: 1px solid #8E8E8E;
+}
+
+ul.todo-list todo-item .done input[type='text'] {
+  text-decoration: line-through;
+}
+
+ul.todo-list todo-item .done input[type='text']:focus {
+  text-decoration: none;
 }
