@@ -29,7 +29,7 @@ angular
 
       addTodo: function(text) {
         todos.push({
-          text,
+          text: text,
           done: false,
         });
         saveTodos();
@@ -64,5 +64,5 @@ angular
         }
         saveTodos();
       },
-    }
+    };
   }]);
